@@ -1,6 +1,5 @@
 package com.example.touristguide.controller;
 
-import com.example.touristguide.model.AttractionF;
 import com.example.touristguide.model.TouristAttraction;
 import com.example.touristguide.repository.TouristRepository;
 import com.example.touristguide.service.TouristService;
@@ -43,17 +42,17 @@ public class TouristGuideWebController {
 
     @GetMapping("/add")
     public String showAddForm(Model model) {
-        model.addAttribute("form", new AttractionF());
+        model.addAttribute("form", new TouristAttraction());
 
         model.addAttribute("cities", service.getCities());
-        model.addAttribute("allTags", service.getTags());
+        //model.addAttribute("allTags", service.getTags());
         return "addAttraction";
     }
 
 
 
     @PostMapping("/save")
-    public String saveAttraction(@ModelAttribute("form") AttractionF form) {
+    public String saveAttraction(@ModelAttribute("form") TouristAttraction form) {
 
         TouristAttraction attraction = new TouristAttraction(
                 form.getName(),
@@ -104,7 +103,7 @@ public class TouristGuideWebController {
 
 
         model.addAttribute("cities", service.getCities());
-        model.addAttribute("allTags", service.getTags());
+       // model.addAttribute("allTags", service.getTags());
 
         return "updateAttraction";
     }
