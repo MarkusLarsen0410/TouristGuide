@@ -26,9 +26,7 @@ public class TouristService {
     public List<String> getCities() {
         return repository.getCities();
     }
-    public List<String> getTags() {
-        return repository.getTags();
-    }
+
     public void updateAttraction(TouristAttraction attraction) {
         repository.update(attraction);
     }

@@ -15,7 +15,10 @@ public class TouristAttraction {
         this.tags = tags;
     }
 
-    public String getName(){
+    public TouristAttraction() {
+    }
+
+    public String getName() {
         return name;
     }
 
@@ -27,18 +30,22 @@ public class TouristAttraction {
         return description;
     }
 
-    public void setDescription(String description){
+    public void setDescription(String description) {
         this.description = description;
     }
+
     public String getCity() {
         return city;
     }
+
     public void setCity(String city) {
         this.city = city;
     }
+
     public List<String> getTags() {
-    return tags;
+        return tags;
     }
+
     public void setTags(List<String> tags) {
 
     }
