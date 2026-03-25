@@ -1,5 +1,6 @@
-DROP TABLE IF EXISTS city;
 DROP TABLE IF EXISTS tourist_attraction;
+
+DROP TABLE IF EXISTS city;
 
 CREATE TABLE IF NOT EXISTS city
 (
